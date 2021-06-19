@@ -1,0 +1,24 @@
+<html>
+<title>JuneHomes - sold out</title>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td style="width: 100px;">Hotel</td>
+                <td style="width: 100px;">Room</td>
+                <td style="width: 100px;">SoldOut</td>
+            </tr>
+        </thead>
+    <tbody>
+    {% for room in objects %}
+        <tr>
+            <td>{{ room.title }}</td>
+            <td>{{ room.rooms__title }}</td>
+            <td>{% if room.sold_out %} True {% else %} False {% endif %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+</body>
+</html>
